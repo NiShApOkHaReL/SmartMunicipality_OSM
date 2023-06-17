@@ -14,24 +14,36 @@ $conn = mysqli_connect("localhost","root","","hackfest");
 </head>
 <body>
 
-<body class="bg-blue-100" >
-    <div>
-        <p class=" flex justify-center text-center text-red-200 text-2xl bg-blue-950">Smart Municipality</p>
-    </div>
-    <div class=" mt-20 ">
-        <p class="text-center text-red-600 text-4xl font-serif font-semibold " >Log In to Admin Dashboard</p>
-    </div>
-    <div class=" flex justify-center  basis-5/12 ">
-        <form action="" method="post" class=" bg-white shadow-2xl rounded-lg mt-24 h-96 w-1/4" >
-            <div class="flex flex-col justify-center items-center">
-            <input type="email" name="admin_email" id="mail" placeholder="Email" class="h-14 w-72 rounded-md mt-14 border-gray-400 border-2"> <br> <br>
-            <input type="password" name="admin_pass" id="pass" placeholder="Password" class="h-14 w-72 rounded-md border-gray-400 border-2">  </div> <br> <br>
-            <div class=" flex items-center justify-center ">
-                <button class="bg-red-500 text-white font-semibold text-xl h-14 w-52 rounded-md hover:bg-red-600 items-center mx-auto " type="submit" name="admin_login">Log In</button>
+
+
+    <body class="bg-blue-100" >
+    <main class="min-h-screen flex items-center justify-center">
+        <div class=" w-96 ">
+            <p class="text-center text-blue-600 text-4xl font-serif font-semibold cursor-pointer mt-16 " >Log In to Admin Dashboard</p>
+            <form action="" method="post" class=" bg-white shadow-2xl rounded-lg mt-16 p-8" >
+                <div class="flex flex-col">
+                    <input type="email" name="admin_email" id="mail" placeholder="Email" class="h-14 rounded-md mt-6 border-gray-400 border-2"> <br>   
+                    <input type="password" name="admin_pass" id="pass" placeholder="Password" class="h-14 rounded-md border-gray-400 mt-6 border-2">  
+                </div> 
+                <div class=" flex mt-8 justify-center ">
+                    <input type="submit" name="admin_login" value="Log In" class="bg-lime-600 text-white text-center font-semibold text-xl h-14 w-52 rounded-md hover:bg-lime-700 " >
+                    
                  </div>
-        </form>
-    </div>
-</body>
+                 
+                 
+            
+            </form>
+        </div>
+    
+    </main>
+    <footer>
+        <div >
+            <p class=" flex justify-center text-center font-semibold text-white text-2xl bg-blue-950 py-4">Smart Municipality  <span>&#169;</span> 2023</p>
+           
+        </div>
+    </footer>
+    
+
 </body>
 </html>
 

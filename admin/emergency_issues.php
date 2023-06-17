@@ -21,7 +21,8 @@ if (isset($_POST['solve'])) {
     exit();
 }
 
-$query = "SELECT * FROM issues ORDER BY id DESC";
+$query ="SELECT * FROM issues WHERE emergency_status = 'emergency' ORDER BY id DESC";
+
 $result = mysqli_query($conn, $query);
 
 
@@ -35,21 +36,21 @@ $result = mysqli_query($conn, $query);
 </head>
 
 <body class="bg-blue-100">
-    
+    <main class="h-screen">
     <div class=" flex h-auto w-auto flex-col justify-center bg-blue-950 ">
         <p class="text-center m-6 text-white text-4xl font-serif font-semibold cursor-pointer">Welcome to the Admin Dashboard</p>
         <nav >
             <div class="flex justify-center items-center">
             <ul class="flex items-center justify-center ">
              
-                <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="normal_issues.php">Normal Issues</a></li>
+               
                 <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="emergency_issues.php">Emergency Issues</a></li>
                 <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="index.php">Home</a></li>
              </ul>
             </div>
         </nav>
     </div>
-        <h2 class="cursor-pointer text-blue-950 text-xl underline m-3 text-center" >All Issues</h2>
+        <h2 class=" text-blue-950 text-xl underline m-3 text-center cursor-pointer" >Emergency Issues</h2>
          <table class="table-auto text-center border-separate border border-slate-500">
             <thead>
             <tr>
@@ -98,6 +99,7 @@ $result = mysqli_query($conn, $query);
             
             <?php $issueCount++; } ?>
         </table>
+    
     </main>
     <footer>
         <div >
